@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Dish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        label {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a new Dish!</h1>
+    <a href="/">Home</a>
+    <div class="container">
+        @model Dish
+        <form asp-action="new" asp-controller="Home" method="post">
+
+            <br>
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <br>
+
+            <br>
+            <span asp-validation-for="Chef"></span>
+            <label asp-for="Chef"></label>
+            <input asp-for="Chef">
+            <br>
+
+            <br>
+            <span asp-validation-for="Calories"></span>
+            <label asp-for="Calories"></label>
+            <input asp-for="Calories">
+            <br>
+
+            <br>
+            <span asp-validation-for="Tastiness"></span>
+            <label asp-for="Tastiness"></label>
+            <select asp-for="Tastiness">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+
+            <br>
+            <span asp-validation-for="Description"></span>
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" cols="30" rows="10"></textarea>
+            <br>
+
+            <br>
+            <input type="submit">
+            
+        </form>
+    </div>
+</body>
+</html>

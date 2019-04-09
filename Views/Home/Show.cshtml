@@ -1,0 +1,25 @@
+@model Dish
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Show Dish</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="container">
+    <a href="/">Home</a>
+    <div style="text-align: center;">
+        <h1>@Model.Name</h1>
+        <h3>@Model.Chef</h3>
+    </div>
+    <hr style="border: 1px solid black;">
+    <h2>@Model.Description</h2>
+    <h2>Calories: @Model.Calories</h2>
+    <h2>Tastiness: @Model.Tastiness</h2>   
+    <a class="btn btn-danger" href="delete/@Model.DishId">Delete</a>
+    <a class="btn btn-primary" href="edit/@Model.DishId">Edit</a>
+</body>
+</html>
